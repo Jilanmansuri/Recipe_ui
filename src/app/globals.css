@@ -1,43 +1,48 @@
+/* 
+  Recipe Book App - Student Web Dev Project
+  Built with Next.js & Tailwind CSS
+*/
 @import "tailwindcss";
 
 @layer base {
   :root {
-    --background: #FCFAF6;
-    --foreground: #1C1917;
-    --primary: #C2410C;
-    --primary-hover: #9A3412;
-    --border-color: #E7E5E4;
+    --background: #f9fafb;
+    --foreground: #1f2937;
+    --primary: #ea580c;
+    --primary-hover: #c2410c;
+    --border-color: #e5e7eb;
   }
 
   body {
     background-color: var(--background);
     color: var(--foreground);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
 }
 
 .bg-cream {
-  background-color: #FCFAF6;
+  background-color: #f9fafb;
 }
 
 .bg-paper {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .border-subtle {
-  border-color: #E7E5E4;
+  border-color: #e5e7eb;
 }
 
 .text-terracotta {
-  color: #C2410C;
+  color: #ea580c;
 }
 
 .bg-terracotta {
-  background-color: #C2410C;
+  background-color: #ea580c;
 }
 
 .bg-terracotta:hover {
-  background-color: #9A3412;
+  background-color: #c2410c;
 }
+

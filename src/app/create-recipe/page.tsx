@@ -54,54 +54,54 @@ export default function CreateRecipePage() {
 
   return (
     <div className="flex flex-col lg:flex-row min-h-[calc(100vh-64px)] bg-[#FCFAF6]">
-      <aside className="w-full lg:w-64 bg-white border-r border-stone-200 p-5 flex flex-col justify-between shrink-0">
+      <aside className="w-full lg:w-64 bg-white border-r border-gray-200 p-5 flex flex-col justify-between shrink-0">
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-7 h-7 bg-[#C2410C] text-white font-bold flex items-center justify-center rounded text-xs">
-              ER
+            <div className="w-8 h-8 bg-orange-500 text-white font-bold flex items-center justify-center rounded-md text-xs shadow-xs">
+              RB
             </div>
             <div>
-              <div className="font-semibold text-stone-900 text-sm">Recipe Studio</div>
-              <div className="text-[10px] text-stone-400 font-mono">v1.0 Editor Mode</div>
+              <div className="font-semibold text-gray-900 text-sm">Recipe Form</div>
+              <div className="text-[11px] text-gray-500">Add New Dish</div>
             </div>
           </div>
 
           <nav className="space-y-1 mb-8 text-sm">
-            <div className="flex items-center gap-2.5 px-3 py-2 bg-[#C2410C] text-white rounded font-medium">
+            <div className="flex items-center gap-2.5 px-3 py-2 bg-orange-600 text-white rounded-md font-medium text-xs">
               <span>✎</span>
-              <span>Editor</span>
+              <span>New Recipe</span>
             </div>
 
-            <div className="flex items-center justify-between px-3 py-2 text-stone-600 hover:bg-stone-50 rounded cursor-pointer transition-colors">
+            <div className="flex items-center justify-between px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-md cursor-pointer transition-colors text-xs">
               <div className="flex items-center gap-2.5">
                 <span>📄</span>
-                <span>Drafts</span>
+                <span>My Drafts</span>
               </div>
-              <span className="text-[11px] bg-stone-100 text-stone-500 px-1.5 py-0.2 rounded font-mono">
+              <span className="text-[11px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded font-mono">
                 3
               </span>
             </div>
 
-            <div className="flex items-center gap-2.5 px-3 py-2 text-stone-600 hover:bg-stone-50 rounded cursor-pointer transition-colors">
+            <div className="flex items-center gap-2.5 px-3 py-2 text-gray-600 hover:bg-gray-50 rounded-md cursor-pointer transition-colors text-xs">
               <span>⚙</span>
               <span>Settings</span>
             </div>
           </nav>
 
-          <div className="pt-4 border-t border-stone-100">
+          <div className="pt-4 border-t border-gray-100">
             <Link
               href="/recipes"
-              className="flex items-center gap-2 text-xs text-stone-600 hover:text-[#C2410C] transition-colors"
+              className="flex items-center gap-2 text-xs text-gray-600 hover:text-orange-600 transition-colors font-medium"
             >
               <span>←</span>
-              <span>Back to Explorer</span>
+              <span>Back to Recipes</span>
             </Link>
           </div>
         </div>
 
-        <div className="text-[11px] text-stone-400 pt-6 border-t border-stone-100 space-y-1">
-          <div className="hover:text-stone-600 cursor-pointer">📖 Documentation</div>
-          <div>© 2025 Everyday Recipes</div>
+        <div className="text-[11px] text-gray-400 pt-6 border-t border-gray-100 space-y-1">
+          <div>🎓 Student Project Submission</div>
+          <div>Next.js &amp; Tailwind CSS</div>
         </div>
       </aside>
 
@@ -113,29 +113,29 @@ export default function CreateRecipePage() {
           </div>
         )}
 
-        <div className="text-xs text-stone-500 mb-2 flex items-center gap-2">
-          <span>Studio</span>
+        <div className="text-xs text-gray-500 mb-2 flex items-center gap-2">
+          <Link href="/recipes" className="hover:text-orange-600">Home</Link>
           <span>/</span>
-          <span className="text-stone-800 font-medium">New Recipe Draft</span>
+          <span className="text-gray-800 font-medium">Add New Recipe</span>
         </div>
 
         <div className="flex items-center justify-between mb-2">
-          <h1 className="text-3xl font-bold tracking-tight text-stone-900">
-            Create Recipe
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+            Submit a New Recipe 📝
           </h1>
-          <span className="text-[11px] font-mono px-2 py-0.5 bg-indigo-50 text-indigo-700 border border-indigo-200 rounded">
-            Unsaved Changes
+          <span className="text-xs px-2.5 py-0.5 bg-orange-50 text-orange-700 border border-orange-200 rounded-full font-medium">
+            Draft Mode
           </span>
         </div>
 
-        <p className="text-sm text-stone-600 mb-8 leading-relaxed">
-          Enter recipe parameters, ingredients, and sequential preparation instructions for the culinary index.
+        <p className="text-sm text-gray-600 mb-8 leading-relaxed">
+          Fill in the details below to add your favorite home recipe to the collection.
         </p>
 
         <form onSubmit={handlePublish} className="space-y-8">
-          <div className="bg-white border border-stone-200 rounded-lg p-6 shadow-xs">
-            <h2 className="text-base font-semibold text-stone-900 mb-5">
-              Recipe Parameters
+          <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-xs">
+            <h2 className="text-base font-semibold text-gray-900 mb-5">
+              Basic Recipe Information
             </h2>
 
             <div className="space-y-4 text-xs">
@@ -278,31 +278,31 @@ export default function CreateRecipePage() {
             <button
               type="button"
               onClick={addIngredientRow}
-              className="w-full py-2 border border-dashed border-stone-300 hover:border-[#C2410C] hover:text-[#C2410C] text-stone-600 rounded text-xs font-medium transition-colors flex items-center justify-center gap-1.5"
+              className="w-full py-2 border border-dashed border-gray-300 hover:border-orange-500 hover:text-orange-600 text-gray-600 rounded-md text-xs font-medium transition-colors flex items-center justify-center gap-1.5"
             >
               <span>+</span>
-              <span>Add Row</span>
+              <span>Add Another Ingredient</span>
             </button>
           </div>
 
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-stone-200">
-            <span className="text-xs text-stone-500">
-              Auto-saved locally 2m ago
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-gray-200">
+            <span className="text-xs text-gray-500">
+              Form autosaved locally
             </span>
 
             <div className="flex items-center gap-3">
               <button
                 type="button"
                 onClick={handleSaveDraft}
-                className="px-4 py-2 bg-white border border-stone-200 hover:bg-stone-50 text-stone-700 text-xs font-medium rounded transition-colors"
+                className="px-4 py-2 bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 text-xs font-medium rounded-md transition-colors shadow-xs"
               >
                 Save Draft
               </button>
               <button
                 type="submit"
-                className="px-4 py-2 bg-[#C2410C] hover:bg-[#9A3412] text-white text-xs font-medium rounded transition-colors shadow-xs"
+                className="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white text-xs font-medium rounded-md transition-colors shadow-xs"
               >
-                Publish Recipe
+                Submit Recipe
               </button>
             </div>
           </div>

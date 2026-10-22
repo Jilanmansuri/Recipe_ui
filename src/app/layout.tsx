@@ -4,8 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Everyday Recipes — Functional Culinary Notebook",
-  description: "A curated collection of validated culinary formulas, regional cuisines, and kitchen techniques.",
+  title: "RecipeBook — Simple & Delicious Food Recipes",
+  description: "A student web development recipe app built with Next.js and Tailwind CSS featuring quick meals, baking, and global cuisines.",
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-[#FCFAF6] text-stone-900 antialiased selection:bg-orange-100 selection:text-orange-900">
+      <body className="min-h-screen flex flex-col bg-gray-50 text-gray-900 antialiased selection:bg-orange-100 selection:text-orange-900">
         <Navbar />
         <main className="flex-1">
           {children}

@@ -6,55 +6,52 @@ export default function NotFound() {
   const suggestions = recipesData.filter((r) => suggestedSlugs.includes(r.slug));
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10">
-      <div className="text-xs text-stone-500 mb-6 flex items-center gap-2">
-        <Link href="/recipes" className="hover:text-stone-800">Recipes</Link>
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+      <div className="text-xs text-gray-500 mb-6 flex items-center gap-2">
+        <Link href="/recipes" className="hover:text-orange-600">Home</Link>
         <span>/</span>
-        <span>Index</span>
-        <span>/</span>
-        <span className="text-[#C2410C] font-medium">Not Found</span>
+        <span className="text-orange-600 font-medium">Page Not Found</span>
       </div>
 
-      <div className="bg-white border border-stone-200 rounded-xl p-8 sm:p-12 shadow-xs">
+      <div className="bg-white border border-gray-200 rounded-xl p-6 sm:p-10 shadow-xs">
         <div className="mb-4">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium bg-amber-50 text-amber-900 border border-amber-200 rounded">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium bg-amber-50 text-amber-900 border border-amber-200 rounded-full">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-600"></span>
-            <span>404 • Recipe or Cuisine Not Found</span>
+            <span>404 Error • Recipe Not Found</span>
           </span>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900 mb-3">
-          Recipe not found
+        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 mb-3">
+          Oops! Recipe Not Found 🔍
         </h1>
 
-        <p className="text-sm text-stone-600 leading-relaxed max-w-2xl mb-8">
-          The requested recipe path or cuisine category identifier could not be located in the Everyday Recipes index. The slug may have changed or the recipe has not been cataloged yet.
+        <p className="text-sm text-gray-600 leading-relaxed max-w-2xl mb-8">
+          The recipe you are looking for does not exist or may have been moved. Try browsing all available recipes from the catalog below!
         </p>
 
-        <div className="flex flex-wrap items-center gap-3 mb-12">
+        <div className="flex flex-wrap items-center gap-3 mb-10">
           <Link
             href="/recipes"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#C2410C] hover:bg-[#9A3412] text-white text-xs font-medium rounded transition-colors shadow-xs"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white text-xs font-medium rounded-md transition-colors shadow-xs"
           >
             <span>📖</span>
-            <span>Return to All Recipes</span>
+            <span>Browse All Recipes</span>
           </Link>
 
           <Link
             href="/cuisines"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-stone-200 hover:bg-stone-50 text-stone-700 text-xs font-medium rounded transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 hover:bg-gray-50 text-gray-700 text-xs font-medium rounded-md transition-colors shadow-xs"
           >
-            <span>🏛</span>
-            <span>Browse Cuisines Directory</span>
+            <span>🍳</span>
+            <span>Browse Cuisines</span>
           </Link>
         </div>
 
-        <div className="border-t border-stone-200 pt-8 mb-10">
-          <div className="flex items-center justify-between text-xs text-stone-500 mb-4">
-            <span className="font-semibold uppercase tracking-wider text-stone-700 text-[11px]">
-              Suggested Alternatives from the Notebook
+        <div className="border-t border-gray-100 pt-8">
+          <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
+            <span className="font-semibold text-gray-700">
+              Popular Recipes You Might Like:
             </span>
-            <span className="text-stone-400">Indexed recently</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
